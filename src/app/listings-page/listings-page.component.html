@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="panel panel-primary" *ngFor="let listing of listings">
+      <a class="routerLinkActive" routerLink="/listings/{{listing.id}}">
+        <h3 class="">
+          {{listing.name}}-{{listing.price | currency }}
+        </h3>
+      </a>
+    </div>
+  </div>
+</div>

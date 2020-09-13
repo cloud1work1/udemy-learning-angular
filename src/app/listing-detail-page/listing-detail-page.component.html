@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="panel panel-secondary">
+      <div class="panel-heading">
+        <h3>Item Details</h3>
+        <button class="btn btn-info">
+          <a routerLink="/listings">Back</a>
+        </button>
+      </div>
+      <div class="panel-body list-group">
+        <h2 class="list-group-item">{{listing.name}}</h2>
+        <p class="list-group-item">{{listing.description}}</p>
+        <p class="list-group-item">{{listing.price | currency}}</p>
+        <button class="btn btn-success">
+          <a routerLink="/contact/{{listing.id}}">Contact Seller</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
