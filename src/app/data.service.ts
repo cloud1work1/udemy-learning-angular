@@ -25,4 +25,11 @@ export class DataService {
     return of(this.listings.find(item => item.id === id));
   }
 
+  addListing(listing: Listing): void {
+    this.listings = SampleListings;
+    const newid = this.listings.sort((listing1, listing2) => listing2.id - listing1.id)[0].id + 1;
+    listing.id = newid;
+    this.listings.push(listing);
+  }
+
 }

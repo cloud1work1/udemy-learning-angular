@@ -9,7 +9,7 @@
     <div class="panel panel-body">
       <div class="list-group">
         <div class="list-group-item" *ngFor="let item of myListings; let i=index;">
-          <h3>{{item.name}}</h3>
+          <h3>{{item.id}}.{{item.name}}</h3>
           <p>{{item.description}}</p>
           <p>{{item.price | currency}}</p>
           <a class="routerLinkActive" routerLink="/edit-listing/{{item.id}}">
@@ -18,6 +18,11 @@
           <button class="btn btn-danger" (click)="deleteEntry(i)">Delete</button>
         </div>
       </div>
+    </div>
+    <div class="panel-footer">
+      <a class="routerLinkActive" routerLink="/new-listing">
+        <button class="btn btn-default">Create New Listing</button>
+      </a>
     </div>
   </div>
 </div>
